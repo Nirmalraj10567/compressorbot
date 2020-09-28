@@ -41,7 +41,7 @@ async def progress_for_pyrogram(
                 statusMsg = json.load(f)
                 if not statusMsg["running"]:
                     bot.stop_transmission()
-        speed = current / diff
+        speed = current / diff * 10
         elapsed_time = round(diff) * 1000
         time_to_completion = round((total - current) / speed) * 1000
         estimated_total_time = elapsed_time + time_to_completion
