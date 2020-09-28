@@ -103,9 +103,9 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
         else:
           frame = 1;
         if len(speed):
-          speed = speed[-1]
+          speed = speed[-1] * 10
         else:
-          speed = 10;
+          speed = 1;
         if len(time_in_us):
           time_in_us = time_in_us[-1]
         else:
